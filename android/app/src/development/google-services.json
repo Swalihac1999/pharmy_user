@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "44891642450",
+    "project_id": "phaarmy-1560e",
+    "storage_bucket": "phaarmy-1560e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44891642450:android:908ef3dd51930ce3099d8b",
+        "android_client_info": {
+          "package_name": "com.baabtra.pharmy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "44891642450-4na78lr0mmkbptoqs0ptgeb0eeroj8fv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzveEna5UahIE4poxfvlBqrFP3noxxtXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "44891642450-4na78lr0mmkbptoqs0ptgeb0eeroj8fv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44891642450:android:1a0b6e3b018eaf36099d8b",
+        "android_client_info": {
+          "package_name": "com.example.verygoodcore.phaarmy_user.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "44891642450-4na78lr0mmkbptoqs0ptgeb0eeroj8fv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzveEna5UahIE4poxfvlBqrFP3noxxtXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "44891642450-4na78lr0mmkbptoqs0ptgeb0eeroj8fv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
