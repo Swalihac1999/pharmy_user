@@ -27,7 +27,6 @@ class BookingPage extends StatefulWidget {
 List<String> payment = <String>[
   'Cash on delivery',
   'Net banking',
-  'UPI transaction',
 ];
 String dropdownValueP = payment.first;
 TextEditingController namecontroller = TextEditingController();
@@ -161,9 +160,10 @@ class _BookingPageState extends State<BookingPage> {
 
                     shape: RoundedRectangleBorder(
                       side: const BorderSide(
-                          color: Color.fromARGB(255, 63, 61, 61)
-                          //width: 2.0,
-                          ),
+                        color: Color.fromARGB(255, 63, 61, 61)
+                        //width: 2.0,
+                        ,
+                      ),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     color: Colors.white,
@@ -391,7 +391,7 @@ class _BookingPageState extends State<BookingPage> {
                   height: 55,
                   width: MediaQuery.of(context).size.width - 60,
                   decoration: const BoxDecoration(
-                    color: Color.fromARGB(255, 60, 61, 61),
+                    color: Color.fromARGB(255, 59, 108, 176),
                     borderRadius: BorderRadius.all(
                       Radius.circular(15),
                     ),

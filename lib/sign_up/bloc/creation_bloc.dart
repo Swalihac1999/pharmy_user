@@ -11,7 +11,8 @@ class CreationBloc extends Bloc<CreationEvent, CreationState> {
     on<CreationEvent>((event, emit) async {
       if (event is SignEvent) {
         final auth = FirebaseAuth.instance;
-        final userRef = FirebaseFirestore.instance.collection('register_collection');
+        final userRef =
+            FirebaseFirestore.instance.collection('register_collection');
         print('sdfsdfsdgfsdfg');
         try {
           await auth.createUserWithEmailAndPassword(
@@ -20,6 +21,7 @@ class CreationBloc extends Bloc<CreationEvent, CreationState> {
           );
           await userRef.doc(auth.currentUser!.uid).set({
             'userid': auth.currentUser!.uid,
+            'userName': event.userName,
             'email': event.email,
             'second name': event.name,
             'password': event.password,

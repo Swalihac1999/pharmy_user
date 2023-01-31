@@ -4,6 +4,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:phaarmy_user/bottum_navigat/bottum_navigat.dart';
+import 'package:phaarmy_user/home_page/homePage.dart';
 
 class BookingView extends StatelessWidget {
   BookingView({super.key});
@@ -18,7 +20,7 @@ class BookingView extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Dashboard(),),);
           },
           icon: const Icon(
             Icons.arrow_back_ios_new,
@@ -52,16 +54,16 @@ class BookingView extends StatelessWidget {
                       ),
                     ],
                   ),
-                  height: 250,
+                  height: 200,
                   width: 40,
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(right: 140, top: 6),
+                        padding: const EdgeInsets.only(right: 140,top: 3 ),
                         child: Image.network(
                           bookingview[index]['image'].toString(),
-                          height: 120,
-                          width: 200,
+                          height: 70,
+                          width: 100,
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -82,7 +84,7 @@ class BookingView extends StatelessWidget {
                             height: 30,
                             width: 100,
                             decoration: const BoxDecoration(
-                              color: Color.fromARGB(255, 166, 246, 169),
+                              color: Color.fromARGB(255, 4, 170, 7),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(8)),
                             ),
@@ -105,7 +107,7 @@ class BookingView extends StatelessWidget {
                           height: 30,
                           width: 120,
                           decoration: const BoxDecoration(
-                            color: Colors.black,
+                            color: Color.fromARGB(255, 59, 108, 176),
                             borderRadius: BorderRadius.all(Radius.circular(8)),
                           ),
                           child: Center(

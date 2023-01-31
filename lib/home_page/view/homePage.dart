@@ -1,9 +1,10 @@
-// ignore_for_file: prefer_const_constructors, lines_longer_than_80_chars, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, prefer_single_quotes, avoid_dynamic_calls
+// ignore_for_file: prefer_const_constructors, lines_longer_than_80_chars, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, prefer_single_quotes, avoid_dynamic_calls, avoid_escaping_inner_quotes
 
 // import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:phaarmy_user/categorise/categories.dart';
 import 'package:phaarmy_user/details_product/product_details.dart';
 // import 'package:get/route_manager.dart';
@@ -26,29 +27,53 @@ class _HomePageState extends State<HomePage> {
   Widget appBarTitle = Text("Pharmy");
   Icon actionIcon = Icon(Icons.search);
   final imgList = [
-    'https://cdn-icons-png.flaticon.com/512/6192/6192088.png',
-    'https://cdn-icons-png.flaticon.com/512/6192/6192088.png',
-    'https://cdn-icons-png.flaticon.com/512/6192/6192088.png',
-    'https://cdn-icons-png.flaticon.com/512/6192/6192088.png',
+    {
+      'image': 'assets/image/fever.png',
+      'name':
+          'Fever is a rise in body temperature, usually caused by infection. Then also its caused by viral illnesses shouldn’t be treated with antibiotics, since these drugs have no effect against viruses. High fever (about 41.5°C or more) is extremely dangerous and could trigger convulsions.'
+    },
+    {
+      'image': 'assets/image/headache.png',
+      'name':
+          'Keeping a headache diary can help you determine what triggers your headaches so that you can avoid the triggers. Taking headache medications, including over-the-counter medications, more than twice a week can increase the severity and frequency of your headaches. The average adult needs seven to eight hours of sleep a night.'
+    },
+    {
+      'image': 'assets/image/cough-removebg-preview.png',
+      'name':
+          'The cough can prevent by drinking warm fluids such as broth or teas. And also avoiding dairy products and alcohol. then also breathing in moist air from shower steam or a humidifier.'
+    },
+    {
+      'image': 'assets/image/sore_throat.png',
+      'name': 'We can prevent sore throat by drinking fluids, Fluids keep the throat moist and prevent dehydration. Avoid caffeine and alcohol, which can dehydrate you. Warm liquids — broth, caffeine-free tea or warm water with honey — and cold treats such as ice pops can soothe a sore throat. Don\'t give honey to children younger than age 1. '
+    },
   ];
 
-  List<Widget> tabBarView(List<String> images) {
+  List<Widget> tabBarView(List<Map> images) {
     List<Widget> _widget = [];
 
     for (int i = 0; i < images.length; i++) {
-      _widget.add(Container(
-        margin: EdgeInsets.all(4),
-        padding: EdgeInsets.all(55),
-         decoration: const BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(15)),
-              color: Colors.lime,
-            ),
-        child: Column(
-          children: [
-            Image.network(images[i]),
-            // Text('kkkkkkkk')
-          ],
-        )));
+      _widget.add(
+        Container(
+          margin: EdgeInsets.all(4),
+          padding: EdgeInsets.all(5),
+          decoration: const BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(15)),
+            color: Color.fromARGB(255, 244, 250, 193),
+          ),
+          child: Column(
+            children: [
+              Image.asset(
+                imgList[i]['image'].toString(),
+                height: 120,
+                width: 100,
+              ),
+              Text(
+                imgList[i]['name'].toString(),style: GoogleFonts.adventPro(),
+              )
+            ],
+          ),
+        ),
+      );
     }
     return _widget;
   }
@@ -56,9 +81,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: DrawerPage(),
+      drawer: Drawerpage(),
       appBar: AppBar(
-        backgroundColor:  Color.fromARGB(255, 59, 108, 176),
+        backgroundColor: Color.fromARGB(255, 59, 108, 176),
         automaticallyImplyLeading: false,
         centerTitle: true,
         title: appBarTitle,
@@ -100,9 +125,13 @@ class _HomePageState extends State<HomePage> {
                     child: Text(
                       'Basic Treatments',
                       style: TextStyle(
-                          fontWeight: FontWeight.lerp(
-                              FontWeight.w300, FontWeight.w900, 90,),
-                          fontSize: 18,),
+                        fontWeight: FontWeight.lerp(
+                          FontWeight.w300,
+                          FontWeight.w900,
+                          90,
+                        ),
+                        fontSize: 18,
+                      ),
                     ),
                   ),
                 ),

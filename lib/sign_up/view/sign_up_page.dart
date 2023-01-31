@@ -10,6 +10,7 @@ class SignUp extends StatelessWidget {
   SignUp({super.key});
 
   final TextEditingController emailController = TextEditingController();
+  final TextEditingController usernameController = TextEditingController();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmpasswordController =
@@ -173,6 +174,7 @@ class SignUp extends StatelessWidget {
                                 onPressed: () {
                                   if (_formKey.currentState!.validate()) ;
                                   _regBloc.add(SignEvent(
+                                    userName:usernameController.text,
                                       email: emailController.text,
                                       name: nameController.text,
                                       password: passwordController.text,
