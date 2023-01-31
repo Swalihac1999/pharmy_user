@@ -5,7 +5,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:phaarmy_user/categorise/categories.dart';
 import 'package:phaarmy_user/details_product/product_details.dart';
 // import 'package:get/route_manager.dart';
 // import 'package:phaarmy/add_product/AddProduct.dart';
@@ -101,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                     decoration: InputDecoration(
                         prefixIcon: Icon(Icons.search, color: Colors.white),
                         hintText: "Search...",
-                        hintStyle: TextStyle(color: Colors.white)),
+                        hintStyle: TextStyle(color: Colors.white),),
                   );
                 } else {
                   actionIcon = Icon(Icons.search);
